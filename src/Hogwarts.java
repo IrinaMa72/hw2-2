@@ -35,5 +35,6 @@ public class Hogwarts {
 
    public String getName() {
       return name;
+
    }
 }

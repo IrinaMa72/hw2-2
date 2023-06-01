@@ -4,7 +4,9 @@ public class Slytherin extends Hogwarts{
    private int ambition;
    private int resourcefulness;
    private int desireForPower;
-    public Slytherin(int cunning, int resolve, int ambition, int resourcefulness, int desireForPower) {
+
+    public Slytherin(String name, int witchcraft, int transgress, int cunning, int resolve, int ambition, int resourcefulness, int desireForPower) {
+        super(name, witchcraft, transgress);
         this.cunning = cunning;
         this.resolve = resolve;
         this.ambition = ambition;
@@ -51,23 +53,34 @@ public class Slytherin extends Hogwarts{
     public void setDesireForPower(int desireForPower) {
         this.desireForPower = desireForPower;
     }
-    public void compare(Slytherin student) {
-        int powerStudentOne = student.getWitchcraft()+ student.getTransgress()+ student.cunning+ student.resolve+ student.ambition+ student.resourcefulness+ student.desireForPower;
-        int powerStudentSecond = this.getWitchcraft()+ this.getTransgress()+ this.cunning+ this.resolve+ this.ambition+ student.resourcefulness+ student.desireForPower;
-        if (powerStudentOne>powerStudentSecond) {
-            System.out.println("Победил "+ getName());
-        } else if (powerStudentOne<powerStudentSecond) {
-            System.out.println("Победил "+ getName());
-        } else System.out.println("Победила дружба!");}
+//    public void compare(Slytherin student) {
+//        int powerStudentOne = student.getWitchcraft()+ student.getTransgress()+ student.cunning+ student.resolve+ student.ambition+ student.resourcefulness+ student.desireForPower;
+//        int powerStudentSecond = this.getWitchcraft()+ this.getTransgress()+ this.cunning+ this.resolve+ this.ambition+ student.resourcefulness+ student.desireForPower;
+//        if (powerStudentOne>powerStudentSecond) {
+//            System.out.println("Победил "+ getName());
+//        } else if (powerStudentOne<powerStudentSecond) {
+//            System.out.println("Победил "+ getName());
+//        } else System.out.println("Победила дружба!");}
+
+    @Override
+    public int calculateSpecificScore() {
+        return this.cunning + this.resolve + this.ambition + this.resourcefulness + this.desireForPower;
+    }
 
     @Override
     public String toString() {
-        return "Я " + this.getName() + " - студент Slytherin, у меня cunning=" + cunning +
+        return super.toString() + "Я " +
+                //this.getName() +
+                " - студент Slytherin, у меня cunning=" + cunning +
                 ", resolve=" + resolve +
                 ", ambition=" + ambition +
                 ", resourcefulness=" + resourcefulness +
                 ", desireForPower=" + desireForPower +
-                ", колдовство=" + this.getWitchcraft() + ", способность трансгрессировать=" + this.getTransgress();
+                ", колдовство="
+               // + this.getWitchcraft()
+                + ", способность трансгрессировать="
+                //+ this.getTransgress()
+                ;
     }
 
 

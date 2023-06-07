@@ -53,14 +53,6 @@ public class Slytherin extends Hogwarts{
     public void setDesireForPower(int desireForPower) {
         this.desireForPower = desireForPower;
     }
-//    public void compare(Slytherin student) {
-//        int powerStudentOne = student.getWitchcraft()+ student.getTransgress()+ student.cunning+ student.resolve+ student.ambition+ student.resourcefulness+ student.desireForPower;
-//        int powerStudentSecond = this.getWitchcraft()+ this.getTransgress()+ this.cunning+ this.resolve+ this.ambition+ student.resourcefulness+ student.desireForPower;
-//        if (powerStudentOne>powerStudentSecond) {
-//            System.out.println("Победил "+ getName());
-//        } else if (powerStudentOne<powerStudentSecond) {
-//            System.out.println("Победил "+ getName());
-//        } else System.out.println("Победила дружба!");}
 
     @Override
     public int calculateSpecificScore() {
@@ -69,18 +61,12 @@ public class Slytherin extends Hogwarts{
 
     @Override
     public String toString() {
-        return super.toString() + "Я " +
-                //this.getName() +
-                " - студент Slytherin, у меня cunning=" + cunning +
+        return super.toString() + "Я " + " - студент Slytherin, у меня cunning=" + cunning +
                 ", resolve=" + resolve +
                 ", ambition=" + ambition +
                 ", resourcefulness=" + resourcefulness +
                 ", desireForPower=" + desireForPower +
-                ", колдовство="
-               // + this.getWitchcraft()
-                + ", способность трансгрессировать="
-                //+ this.getTransgress()
-                ;
+                ", колдовство=" + ", способность трансгрессировать=";
     }
 
 

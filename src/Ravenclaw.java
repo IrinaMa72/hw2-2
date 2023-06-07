@@ -42,14 +42,6 @@ public class Ravenclaw extends Hogwarts{
     public void setCreative(int creative) {
         this.creative = creative;
     }
-//    public void compare(Ravenclaw student) {
-//        int powerStudentOne = student.getWitchcraft()+ student.getTransgress()+ student.smarts+ student.wisdom+ student.wittiness+ student.creative;
-//        int powerStudentSecond = this.getWitchcraft()+ this.getTransgress()+ this.smarts+ this.wisdom+ this.wittiness+ student.creative;
-//        if (powerStudentOne>powerStudentSecond) {
-//            System.out.println("Победил "+ getName());
-//        } else if (powerStudentOne<powerStudentSecond) {
-//            System.out.println("Победил "+ getName());
-//        } else System.out.println("Победила дружба!");}
 
     @Override
     public int calculateSpecificScore() {
@@ -58,17 +50,11 @@ public class Ravenclaw extends Hogwarts{
 
     @Override
     public String toString() {
-        return super.toString() + "Я " +
-               // this.getName() +
-                " - студент Ravenclaw, у меня smarts=" + smarts +
+        return super.toString() + "Я " + " - студент Ravenclaw, у меня smarts=" + smarts +
                 ", wisdom=" + wisdom +
                 ", wittiness=" + wittiness +
                 ", creative=" + creative +
-                ", колдовство=" +
-             //   this.getWitchcraft() +
-                ", способность трансгрессировать="
-              //  this.getTransgress()
-                ;
+                ", колдовство=" + ", способность трансгрессировать=";
     }
 
 
